@@ -1,0 +1,49 @@
+/*
+Q7 Exercise, (Emergency Drone Distance Calculator)
+
+*/
+
+#include <iostream>
+#include <iomanip>
+#include <cmath> 
+using namespace std;
+
+
+int main() 
+{ 
+    //Input of Variables and Numbers 
+    
+   double x1, y1, x2, y2;
+    
+  // result of Var and Num
+    double dx, dy, distance;
+    int roundedDistance; 
+    
+    cout << "Enter the x1: ";
+    cin >> x1;
+    cout << "Enter the y1: ";
+    cin >> y1;
+    
+    cout << "Enter the x2: ";
+    cin >> x2;
+    cout << "Enter the y2: ";
+    cin >> y2;
+    
+    
+  // Process for result 
+  
+    dx = x2 - x1;
+    dy = y2 - y1;
+    distance = sqrt(pow(dx, 2) + pow(dy, 2));
+    roundedDistance = round(distance);
+  
+    cout << fixed << setprecision(3);
+    cout << "dx = " << dx;
+    cout << "; dy = " << dy;
+    cout << "; Distance = " << distance;
+    cout << "; Rounded distance = " << roundedDistance << endl;
+    
+    
+    return 0;
+    
+}
