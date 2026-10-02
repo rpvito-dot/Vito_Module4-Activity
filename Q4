@@ -1,0 +1,56 @@
+/*
+Q4 Exercise, (Paint Can Estimator) 
+
+*/
+
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+
+int main() 
+{ 
+    //Input of measurements  
+    
+   double width, height, coverage;
+    int coats;
+    
+    //result of input measurements
+    double wallArea, totalPaintArea, exactCans;
+    int cansToBuy;
+    
+    //Process of Input
+    
+    cout << "Enter Width of Wall: ";
+    cin >> width;
+
+    cout << "Enter Height of a Wall: ";
+    cin >> height;
+
+    cout << "Enter The Number of Coats: ";
+    cin >> coats;
+
+    cout << "Enter The Coverage per Can: ";
+    cin >> coverage;
+    
+    
+    // results of the input Process
+
+    wallArea = width * height;
+    totalPaintArea = wallArea * coats;
+    exactCans = totalPaintArea / coverage;
+    cansToBuy = ceil(exactCans);
+    
+    
+    //output
+    
+    cout << fixed << setprecision(2);
+    cout << "Wall area = " << wallArea;
+    cout << "; Total paint area = " << totalPaintArea;
+    cout << "; Exact cans = " << exactCans;
+    cout << "; Cans to buy = " << cansToBuy << endl;
+    
+    return 0;
+    
+}
