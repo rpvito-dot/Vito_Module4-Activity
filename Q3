@@ -1,0 +1,57 @@
+/*
+Q3 Exercise, ( Ride-Sharing Fare Spli) 
+
+*/
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+
+int main() 
+{ 
+    //Ride-Sharing Input 
+    
+    double baseFare, distance, ratePerkm, tollFee, bookingFeePrecent;
+    int Passenger; 
+    
+    //result of input 
+    double distanceCharge, preFeeTotal, bookingFee, grandTotal, perPassenger;
+    
+    //Process of Input
+    
+    cout << "Enter Base Fare: "; 
+    cin >> baseFare;
+
+    cout << "Enter Distance Kilometer: ";
+    cin >> distance;
+
+    cout << "Enter Rate Per Kilometer: ";
+    cin >> ratePerkm;
+
+    cout << "Enter Toll Fee: ";
+    cin >> tollFee;
+
+    cout << "Enter Booking Fee : ";
+    cin >> Passenger;
+    
+    // results of the input Process
+
+    distanceCharge = distance * ratePerkm;
+    preFeeTotal = baseFare + distanceCharge + tollFee;
+    bookingFee = preFeeTotal * (bookingFeePrecent / 100.0);
+    grandTotal = preFeeTotal + bookingFee;
+    perPassenger = grandTotal / Passenger;
+    
+    //output
+    
+   cout << fixed << setprecision(2);
+    cout << "Distance charge = " << distanceCharge;
+    cout << "; Pre-fee = " << preFeeTotal;
+    cout << "; Booking fee = " << bookingFee;
+    cout << "; Total = " << grandTotal;
+    cout << "; Per passenger = " << perPassenger << endl;
+    
+    return 0;
+    
+}
