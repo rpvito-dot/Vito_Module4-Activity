@@ -1,0 +1,52 @@
+/*
+Q2 Exercise, (Scholarship Grade Summary) 
+
+*/
+
+#include <iostream>
+#include <iomanip>
+#include <math.h> 
+using namespace std;
+
+
+int main() 
+{ 
+    //Schoolwork Input 
+    
+    double quiz, laboratory, examination, projects;
+    double average;
+    
+    
+    double weightedGrade;
+    int roundedGrade;
+    int castGrade;
+
+    cout << "Enter Quiz score: ";
+    cin >> quiz;
+
+    cout << "Enter Lab score: ";
+    cin >> laboratory;
+
+    cout << "Enter Project score: ";
+    cin >> projects;
+
+    cout << "Enter Exam score: ";
+    cin >> examination;
+    
+    
+    // process
+    weightedGrade = (quiz * 0.20) + (laboratory * 0.25) + (projects * 0.25) + (examination * 0.30);
+    roundedGrade = round(weightedGrade);
+    castGrade = (int)weightedGrade;
+    
+    //Schoolwork output
+    
+    cout << fixed << setprecision(2);
+    cout << "Weighted grade = " << weightedGrade;
+    cout << "; Rounded = " << roundedGrade;
+    cout << "; Cast to int = " << castGrade << endl;
+    
+    
+    return 0;
+    
+}
