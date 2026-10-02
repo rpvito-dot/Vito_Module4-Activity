@@ -1,0 +1,65 @@
+/*
+Q10 Exercise, ( Online Store Invoice and Shipping Boxes )
+
+*/
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cmath> 
+using namespace std;
+
+
+int main() 
+{ 
+    //Input for Online invoice
+    
+    string productName;
+    double price, discountPercent, shipFeePerBox;
+    int qty, unitsPerBox;
+    
+  // result process for some variables info in input
+  
+  double subtotal, discount, merchandise, exactBoxes, shipping, amountDue;
+    int boxes;
+    
+    cout << "Enter the product name: "; 
+    cin >> productName;
+    
+    cout << "Enter the quantity of the item: ";
+    cin >> qty;
+    
+    cout << "Enter the discount percentage of the item: ";
+    cin >> discountPercent;
+    
+    cout << "Enter the shipping fee per box: ";
+    cin >> shipFeePerBox;
+    
+    cout << "Enter the amount units per box: ";
+    cin >> unitsPerBox;
+    
+    
+    //on going result for process for invoices and shippings 
+    
+    subtotal = price * qty;
+    discount = subtotal * (discountPercent / 100.0);
+    merchandise = subtotal - discount;
+    exactBoxes = (double)qty / unitsPerBox;
+    boxes = ceil(exactBoxes);
+    shipping = boxes * shipFeePerBox;
+    amountDue = merchandise + shipping;
+    
+  // Output of the process  
+  
+    cout << fixed << setprecision(2);
+    cout << "Subtotal = " << subtotal;
+    cout << "; Discount = " << discount;
+    cout << "; Merchandise = " << merchandise;
+    cout << "; Exact boxes = " << exactBoxes;
+    cout << "; Boxes = " << boxes;
+    cout << "; Shipping = " << shipping;
+    cout << "; Amount due = " << amountDue << endl;
+   
+    return 0;
+    
+}
