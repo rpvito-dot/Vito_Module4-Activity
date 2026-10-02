@@ -1,0 +1,39 @@
+/*
+Q5 Exercise, (Conference Seating Planner) 
+
+*/
+
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+
+int main() 
+{ 
+    //Input of Attendees and sit per table 
+    
+    int attendees, seatsPerTable;
+   double exactTables;
+    int tablesRequired, totalSeats, unusedSeats;
+    
+  cout << "Enter Number of Attendees: ";
+    cin >> attendees;
+
+    cout << "Enter Seats per Table: ";
+    cin >> seatsPerTable;
+    
+    //Process of Input
+    //Output
+    
+   cout << fixed << setprecision(2);
+    cout << "Exact tables = " << exactTables;
+    cout << "; Tables required = " << tablesRequired;
+    cout << "; Total seats = " << totalSeats;
+    cout << "; Unused seats = " << unusedSeats << endl;
+   
+    
+    
+    return 0;
+    
+}
