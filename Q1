@@ -1,0 +1,57 @@
+/*
+Q1 Exercise, (Campus Canteen) 
+
+*/
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() 
+{ 
+    //Scenario Input  
+    
+    double mealPrice;
+    int quantity; 
+    double servingPercentage;
+    int numStudents;
+    
+    //Scenario result
+    
+    double subtotal;
+    double serviceCharge;
+    double finalBill;
+    double sharePerStudent; 
+    
+    
+    cout << "Enter Meal Price: "; 
+    cin >> mealPrice;
+    
+    cout << "Enter Quantity: "; 
+    cin >> quantity; 
+    
+    cout << "Enter Serving Percentage: ";
+    cin >> servingPercentage;
+    
+    cout << "Enter Number of Student: "; 
+    cin >> numStudents; 
+    
+    //process 
+    
+    subtotal = mealPrice * quantity;
+    serviceCharge = subtotal * (servingPercentage / 100.0);
+    finalBill = subtotal + serviceCharge;
+    sharePerStudent = finalBill / numStudents; 
+    
+    
+    cout << fixed << setprecision(2);
+    cout << "Subtotal = " << subtotal;
+    cout << "; Service charge = " << serviceCharge;
+    cout << "; Final bill = " << finalBill;
+    cout << "; Share/student = " << sharePerStudent << endl;
+    
+    
+    return 0;
+    
+}
