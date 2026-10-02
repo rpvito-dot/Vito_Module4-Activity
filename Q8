@@ -1,0 +1,49 @@
+/*
+Q8 Exercise, (Environmental Sensor Summary )
+
+*/
+
+#include <iostream>
+#include <iomanip>
+#include <cmath> 
+using namespace std;
+
+
+int main() 
+{ 
+    //Input
+    
+   double T1, T2, T3;
+    int floorAve, ceilAve, truncAve, roundAve;
+    
+  // result process of temperature 
+    cout << "Enter Temperature 1: ";
+    cin >> T1;
+    
+    cout << "Enter Temperature 2: ";
+    cin >> T2;
+    
+    cout << "Enter Temperature 3: ";
+    cin >> T3;
+    
+  // Output of the process  
+  
+    double average = (T1 + T2 + T3) / 3.0;
+    double diff = fabs(T1 - T3);
+    floorAve = floor(average);
+    ceilAve = ceil(average);
+    truncAve = trunc(average);
+    roundAve = round(average);
+    
+    
+    cout << fixed << setprecision(3);
+    cout << "average = " << average;
+    cout << "; |T1-T3| = " << diff;
+    cout << "; floor=" << floorAve;
+    cout << "; ceil=" << ceilAve;
+    cout << "; trunc=" << truncAve;
+    cout << "; round=" << roundAve << endl;
+    
+    return 0;
+    
+}
